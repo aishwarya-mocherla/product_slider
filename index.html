@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         body {
             font-family: "Open Sans", sans-serif;
         }
-        
-        .carousel {
+        /* .carousel {
             margin: 50px auto;
             margin-top: -20px;
         }
@@ -42,8 +42,8 @@
             margin: 0 auto;
             left: 0;
             right: 0;
-        }
-        
+        } */
+        /*
         .carousel .item h4 {
             font-size: 18px;
             margin: 10px 0;
@@ -82,7 +82,7 @@
         
         .carousel .thumb-content {
             padding: 15px;
-        }
+        } */
         
         .carousel .carousel-control {
             width: 40px;
@@ -93,7 +93,7 @@
         .carousel .carousel-control i {
             font-size: 30px;
             position: absolute;
-            top: 18%;
+            top: 50%;
             display: inline-block;
             margin: -16px 0 0 0;
             z-index: 5;
@@ -103,7 +103,7 @@
             text-shadow: none;
             font-weight: bold;
         }
-        
+        /*         
         .carousel .item-price {
             font-size: 13px;
             padding: 2px 0;
@@ -117,7 +117,7 @@
         .carousel .item-price span {
             color: #86bd57;
             font-size: 110%;
-        }
+        } */
         
         .carousel .carousel-control.left i {
             margin-left: -3px;
@@ -126,8 +126,7 @@
         .carousel .carousel-control.left i {
             margin-right: -3px;
         }
-        
-        .carousel .carousel-indicators {
+        /* .carousel .carousel-indicators {
             bottom: -50px;
         }
         
@@ -167,9 +166,8 @@
         .borderless td,
         .borderless th {
             border: none;
-        }
-        
-        @media(max-width:3000px) {
+        } */
+        /* @media(max-width:3000px) {
             .table {
                 display: none;
             }
@@ -228,178 +226,114 @@
             .table {
                 display: block;
             }
+        } */
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Container for flexboxes */
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* Create four equal columns */
+        
+        .column {
+            flex: 25%;
+            padding: 20px;
+        }
+        /* On screens that are 992px wide or less, go from four columns to two columns */
+        
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 50%;
+                height: 100px;
+            }
+            .row {
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .carousel-control {
+                display: none;
+            }
+        }
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .row {
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+            }
         }
     </style>
 </head>
 
 <body>
+
+
+    <br><br>
     <div class="non-container">
         <div class="row">
             <div class="col-md-12">
-                <h4><b>Electronic </b>Products <a href="#" style="font-size: small;">See More</a></h4>
-                <hr>
+
                 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
 
                     <div class="carousel-inner">
                         <div class="item active">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-
-                                        <div class="img-box">
-                                            <div class="a"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-
-                                        <div class="img-box">
-                                            <div class="b"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-
-                                        <div class="img-box">
-                                            <div class="c"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-
-                                        <div class="img-box">
-                                            <div class="d"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="e"><img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="f"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
+                            <div class="row" style="margin-left: 5%; margin-right: 5%;">
+                                <div class="column" style=" height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100%; height=100%">
                                 </div>
 
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="g"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
+                                <div class="column" style=" height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100%; height= 100% ">
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="h"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
 
-                                    </div>
+                                <div class="column " style="height: 200px; ">
+                                    <img src="./assets/images/electronic.jpg " alt=" " width="100% ;height=100%">
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="i"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
 
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="j"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="k"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="l"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
+                                <div class="column" style="height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100% ;height= 100% ">
                                 </div>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="m"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
+                            <div class="row" style="margin-left: 5%; margin-right: 5%;">
+                                <div class="column" style=" height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100%; height=100%">
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="n"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
 
-                                    </div>
+                                <div class="column" style=" height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100%; height= 100% ">
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="o"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
 
-                                        </div>
-
-                                    </div>
+                                <div class="column " style="height: 200px; ">
+                                    <img src="./assets/images/electronic.jpg " alt=" " width="100% ;height=100%">
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="p"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
 
-                                    </div>
+                                <div class="column" style="height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100% ;height= 100% ">
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="q"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
-
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row" style="margin-left: 5%; margin-right: 5%;">
+                                <div class="column" style=" height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100%; height=100%">
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="thumb-wrapper">
-                                        <div class="img-box">
-                                            <div class="r"> <img src="./assets/images/electronic.jpg" class="img-responsive" alt=""></div>
-                                        </div>
 
-                                    </div>
+                                <div class="column" style=" height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100%; height= 100% ">
+                                </div>
+
+                                <div class="column " style="height: 200px; ">
+                                    <img src="./assets/images/electronic.jpg " alt=" " width="100% ;height=100%">
+                                </div>
+
+                                <div class="column" style="height: 200px;">
+                                    <img src="./assets/images/electronic.jpg" alt="" width="100% ;height= 100% ">
                                 </div>
                             </div>
                         </div>
@@ -412,28 +346,6 @@
                         <i class="fa fa-angle-right"></i>
                     </a>
                 </div>
-                <div class="container" style="align-items: center;">
-                    <table class="table boderless">
-
-                        <tbody>
-                            <tr>
-
-                                <td><img src="./assets/images/electronic.jpg" alt=""></td>
-                                <td><img src="./assets/images/electronic.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-
-                                <td><img src="./assets/images/electronic.jpg" alt=""></td>
-                                <td><img src="./assets/images/electronic.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-
-                                <td><img src="./assets/images/electronic.jpg" alt=""></td>
-                                <td><img src="./assets/images/electronic.jpg" alt=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
 
 
 
@@ -443,7 +355,10 @@
 
             </div>
         </div>
+
     </div>
+
+
 </body>
 
 </html>
